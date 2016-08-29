@@ -586,6 +586,12 @@ java_library(
         "//external:gson",
         "//external:guava",
     ],
+    # For Android support.
+    javacopts = [
+        "-source 7",
+        "-target 7",
+    ],
+    visibility = ["//visibility:public"],
 )
 
 ################################################################################
