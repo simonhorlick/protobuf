@@ -534,6 +534,11 @@ java_library(
     ]) + [
         ":gen_well_known_protos_java",
     ],
+    # For Android support.
+    javacopts = [
+        "-source 7",
+        "-target 7",
+    ],
     visibility = ["//visibility:public"],
 )
 
@@ -546,6 +551,11 @@ java_library(
         "protobuf_java",
         "//external:gson",
         "//external:guava",
+    ],
+    # For Android support.
+    javacopts = [
+        "-source 7",
+        "-target 7",
     ],
     visibility = ["//visibility:public"],
 )
