@@ -554,6 +554,7 @@ java_library(
     name = "protobuf_java",
     srcs = glob([
         "java/core/src/main/java/com/google/protobuf/*.java",
+        "javanano/src/main/java/com/google/protobuf/**/*.java",
     ]) + [
         ":gen_well_known_protos_java",
     ],
