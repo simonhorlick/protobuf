@@ -573,8 +573,8 @@ java_library(
     ]),
     deps = [
         "protobuf_java",
-        "//external:gson",
-        "//external:guava",
+        "@gson//jar",
+        "@guava//jar",
     ],
     # For Android support.
     javacopts = [
