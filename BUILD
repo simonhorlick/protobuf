@@ -583,8 +583,8 @@ java_library(
     visibility = ["//visibility:public"],
     deps = [
         "protobuf_java",
-        "//external:gson",
-        "//external:guava",
+        "@gson//jar",
+        "@guava//jar",
     ],
     # For Android support.
     javacopts = [
