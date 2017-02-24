@@ -564,10 +564,22 @@ internal_gen_well_known_protos_java(
 )
 
 java_library(
+    name = "protobuf_javanano",
+    srcs = glob([
+        "javanano/src/main/java/com/google/protobuf/**/*.java",
+    ]),
+    # For Android support.
+    javacopts = [
+        "-source 7",
+        "-target 7",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+java_library(
     name = "protobuf_java",
     srcs = glob([
         "java/core/src/main/java/com/google/protobuf/*.java",
-        "javanano/src/main/java/com/google/protobuf/**/*.java",
     ]) + [
         ":gen_well_known_protos_java",
     ],
