@@ -595,7 +595,7 @@ java_library(
     visibility = ["//visibility:public"],
     deps = [
         "protobuf_java",
-        "@gson//jar",
+        "@com_google_code_gson//jar",
         "@com_google_guava",
     ],
     # For Android support.
